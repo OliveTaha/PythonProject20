@@ -9,3 +9,5 @@ def home(request):
     por=Product.objects.all()
     return render(request,'home.html',{'por':por})
 
+def post_home(request):
+    return render(request,'post_home.html')
