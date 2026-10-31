@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
     path('oparation/',include('myapp.urls')),
-    path('post/', views.post_home, name='post_home')
+    path('',include('posts.urls'))
 ]

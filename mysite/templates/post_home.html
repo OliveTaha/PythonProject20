@@ -1,0 +1,19 @@
+<h1>All Post Shown..</h1>
+Back to <a href="{% url 'home' %}">Product</a><br>
+
+<a href="{% url 'create_post' %}">add</a>
+
+<br>
+{% for i in post %}
+Name: {{i.title}}<br>
+Price: {{i.price}}<br>
+Description: {{i.description}}<br>
+<a href="{% url 'up_post' i.id %}">edit</a>
+<a href="{% url 'del_p' i.id %}">delete</a>
+
+
+<hr>
+{% endfor %}
+
+
+
