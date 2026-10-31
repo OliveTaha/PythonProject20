@@ -1,0 +1,11 @@
+<h1>Products..</h1>
+<a href="{% url 'create' %}">add product</a><br><br>
+
+{% for i in por %}
+Name: {{ i.name }} <br>
+Price: {{ i.price }} $<br>
+<a href="{% url 'update' i.id %}">edit</a>
+<a href="{% url 'delete' i.id %}">delete</a>
+
+<hr>
+{% endfor %}
